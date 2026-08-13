@@ -1,0 +1,17 @@
+{
+ "actions": [], "allow_rename": 0, "autoname": "field:treatment_name",
+ "creation": "2026-08-11 09:00:00.000000", "doctype": "DocType", "engine": "InnoDB",
+ "field_order": ["treatment_name","description","gst_applicable","bas_sales_label","bas_purchase_label","claimable"],
+ "fields": [
+  {"fieldname":"treatment_name","fieldtype":"Data","label":"Treatment","reqd":1,"unique":1,"in_list_view":1},
+  {"fieldname":"description","fieldtype":"Small Text","label":"Description","in_list_view":1},
+  {"fieldname":"gst_applicable","fieldtype":"Check","label":"GST Applicable","description":"Tick only for taxable supplies at the standard rate."},
+  {"fieldname":"bas_sales_label","fieldtype":"Data","label":"BAS Sales Label","description":"e.g. G1, G2, G3, G4"},
+  {"fieldname":"bas_purchase_label","fieldtype":"Data","label":"BAS Purchase Label","description":"e.g. G10, G11, G13, G14, G15"},
+  {"fieldname":"claimable","fieldtype":"Check","label":"Input Tax Credit Claimable","default":"1"}
+ ],
+ "links": [], "modified": "2026-08-11 09:00:00.000000", "modified_by": "Administrator",
+ "module": "ES GST AU", "name": "ES GST Treatment", "naming_rule": "By fieldname", "owner": "Administrator",
+ "permissions": [{"create":1,"delete":1,"email":1,"export":1,"print":1,"read":1,"report":1,"role":"Accounts Manager","share":1,"write":1},{"read":1,"role":"Accounts User"}],
+ "sort_field": "modified", "sort_order": "DESC", "states": [], "track_changes": 1
+}

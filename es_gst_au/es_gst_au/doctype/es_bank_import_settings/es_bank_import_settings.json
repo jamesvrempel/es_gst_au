@@ -1,0 +1,23 @@
+{
+ "actions": [], "allow_rename": 0, "autoname": "field:company",
+ "creation": "2026-08-11 09:00:00.000000", "doctype": "DocType", "engine": "InnoDB",
+ "field_order": ["company","cost_center","column_break_1","auto_submit","auto_reconcile","section_items","default_expense_item","default_income_item","column_break_2","suspense_account","section_dup","duplicate_check"],
+ "fields": [
+  {"fieldname":"company","fieldtype":"Link","label":"Company","options":"Company","reqd":1,"unique":1,"in_list_view":1},
+  {"fieldname":"cost_center","fieldtype":"Link","label":"Default Cost Center","options":"Cost Center","description":"Must not be a group cost centre."},
+  {"fieldname":"column_break_1","fieldtype":"Column Break"},
+  {"fieldname":"auto_submit","fieldtype":"Check","label":"Auto Submit Vouchers","default":"0","description":"Leave off to review before posting to the ledger."},
+  {"fieldname":"auto_reconcile","fieldtype":"Check","label":"Auto Reconcile After Submit","default":"1"},
+  {"fieldname":"section_items","fieldtype":"Section Break","label":"Invoice Defaults"},
+  {"fieldname":"default_expense_item","fieldtype":"Link","label":"Default Expense Item","options":"Item","description":"Used only when a rule creates a Purchase Invoice."},
+  {"fieldname":"default_income_item","fieldtype":"Link","label":"Default Income Item","options":"Item"},
+  {"fieldname":"column_break_2","fieldtype":"Column Break"},
+  {"fieldname":"suspense_account","fieldtype":"Link","label":"Suspense Account","options":"Account","description":"Optional. Where unmatched lines post if you choose to force posting."},
+  {"fieldname":"section_dup","fieldtype":"Section Break","label":"Duplicate Handling"},
+  {"fieldname":"duplicate_check","fieldtype":"Select","label":"On Duplicate Row","options":"Skip\nWarn\nFail Import","default":"Skip"}
+ ],
+ "links": [], "modified": "2026-08-11 09:00:00.000000", "modified_by": "Administrator",
+ "module": "ES GST AU", "name": "ES Bank Import Settings", "naming_rule": "By fieldname", "owner": "Administrator",
+ "permissions": [{"create":1,"delete":1,"email":1,"export":1,"print":1,"read":1,"report":1,"role":"Accounts Manager","share":1,"write":1}],
+ "sort_field": "modified", "sort_order": "DESC", "states": [], "track_changes": 1
+}

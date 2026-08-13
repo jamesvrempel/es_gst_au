@@ -1,0 +1,16 @@
+{
+ "actions": [], "allow_rename": 0, "creation": "2026-08-11 10:00:00.000000",
+ "doctype": "DocType", "editable_grid": 1, "engine": "InnoDB", "istable": 1,
+ "field_order": ["label","label_description","section","amount","is_derived","is_editable"],
+ "fields": [
+  {"fieldname":"label","fieldtype":"Data","label":"Label","in_list_view":1,"columns":1,"read_only":1},
+  {"fieldname":"label_description","fieldtype":"Data","label":"Description","in_list_view":1,"columns":6,"read_only":1},
+  {"fieldname":"section","fieldtype":"Select","label":"Section","options":"Sales\nPurchases\nSummary\nPAYG","read_only":1},
+  {"fieldname":"amount","fieldtype":"Currency","label":"Amount","in_list_view":1,"columns":2},
+  {"fieldname":"is_derived","fieldtype":"Check","label":"Derived","read_only":1},
+  {"fieldname":"is_editable","fieldtype":"Check","label":"Editable","read_only":1}
+ ],
+ "links": [], "modified": "2026-08-11 10:00:00.000000", "modified_by": "Administrator",
+ "module": "ES GST AU", "name": "ES BAS Return Label", "owner": "Administrator",
+ "permissions": [], "sort_field": "idx", "sort_order": "ASC", "states": []
+}

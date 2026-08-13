@@ -1,0 +1,29 @@
+{
+ "actions": [], "allow_rename": 0, "autoname": "field:company",
+ "creation": "2026-08-11 09:00:00.000000", "doctype": "DocType", "engine": "InnoDB",
+ "field_order": ["company","abn","gst_registered","registration_date","column_break_1","reporting_cycle","accounting_basis","gst_rate","section_accounts","gst_on_purchases_account","gst_on_sales_account","column_break_2","purchase_tax_template","sales_tax_template","section_payg","report_paygw","paygw_account","report_payg_instalment"],
+ "fields": [
+  {"fieldname":"company","fieldtype":"Link","label":"Company","options":"Company","reqd":1,"unique":1,"in_list_view":1},
+  {"fieldname":"abn","fieldtype":"Data","label":"ABN","description":"11 digits."},
+  {"fieldname":"gst_registered","fieldtype":"Check","label":"Registered for GST","default":"1","description":"Registration is required above the $75,000 turnover threshold ($150,000 for non-profits)."},
+  {"fieldname":"registration_date","fieldtype":"Date","label":"GST Registration Date"},
+  {"fieldname":"column_break_1","fieldtype":"Column Break"},
+  {"fieldname":"reporting_cycle","fieldtype":"Select","label":"BAS Reporting Cycle","options":"Quarterly\nMonthly\nAnnually","default":"Quarterly","reqd":1},
+  {"fieldname":"accounting_basis","fieldtype":"Select","label":"Accounting Basis","options":"Cash\nAccruals","default":"Cash","reqd":1,"description":"Cash basis is available below the $10m turnover threshold."},
+  {"fieldname":"gst_rate","fieldtype":"Percent","label":"GST Rate","default":"10"},
+  {"fieldname":"section_accounts","fieldtype":"Section Break","label":"Accounts"},
+  {"fieldname":"gst_on_purchases_account","fieldtype":"Link","label":"GST on Purchases Account","options":"Account","description":"Input tax credits. Debited on purchases."},
+  {"fieldname":"gst_on_sales_account","fieldtype":"Link","label":"GST on Sales Account","options":"Account","description":"GST collected. Credited on sales. May be the same account."},
+  {"fieldname":"column_break_2","fieldtype":"Column Break"},
+  {"fieldname":"purchase_tax_template","fieldtype":"Link","label":"Purchase Tax Template","options":"Purchase Taxes and Charges Template","description":"Must be GST-inclusive."},
+  {"fieldname":"sales_tax_template","fieldtype":"Link","label":"Sales Tax Template","options":"Sales Taxes and Charges Template"},
+  {"fieldname":"section_payg","fieldtype":"Section Break","label":"PAYG"},
+  {"fieldname":"report_paygw","fieldtype":"Check","label":"Report PAYG Withholding (W1/W2)"},
+  {"fieldname":"paygw_account","fieldtype":"Link","label":"PAYG Withholding Account","options":"Account","depends_on":"report_paygw"},
+  {"fieldname":"report_payg_instalment","fieldtype":"Check","label":"Report PAYG Instalment (T7)"}
+ ],
+ "links": [], "modified": "2026-08-11 09:00:00.000000", "modified_by": "Administrator",
+ "module": "ES GST AU", "name": "ES GST Settings", "naming_rule": "By fieldname", "owner": "Administrator",
+ "permissions": [{"create":1,"delete":1,"email":1,"export":1,"print":1,"read":1,"report":1,"role":"Accounts Manager","share":1,"write":1}],
+ "sort_field": "modified", "sort_order": "DESC", "states": [], "track_changes": 1
+}
